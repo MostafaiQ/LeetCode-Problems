@@ -4,10 +4,8 @@ class Solution:
         r = 1
         maxP = 0
         while r < len(prices):
-            numL = prices[l]
-            numR = prices[r]
-            profit = numR - numL
-            if numL < numR:
+            profit = prices[r] - prices[l]
+            if prices[l] < prices[r]:
                 maxP = max(maxP, profit)
             else:
                 l = r
